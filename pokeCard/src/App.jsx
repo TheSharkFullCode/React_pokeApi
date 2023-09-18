@@ -2,7 +2,7 @@
 
 import './App.css'
 import { Practice } from './Practice'
-// import { Cafealtura } from './componentes/Cafealtura';
+import { Cafealtura } from './componentes/Cafealtura';
 import CardPicahu from './componentes/CardPicachu';
 import Gitmore from './componentes/Gitmore';
 import PokeList from './componentes/PokeList'
@@ -29,7 +29,7 @@ function App() {
 
       <CardPicahu></CardPicahu>
 
-      {/* <Cafealtura ></Cafealtura> */}
+      <Cafealtura ></Cafealtura>
     </div>
   )
 }

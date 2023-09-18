@@ -1,53 +1,52 @@
-// import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-// export const Cafealtura = ({}) => {
+export const Cafealtura = ({}) => {
 
-//     const [coffe, setCoffes] =useState({})
-//     const [isloading,setIsloading ]=useState(false)
-//         console.log(coffe);
+    const [coffe, setCoffes] =useState([])
+
+    const [isloading,setIsloading ]=useState(false)
+        console.log(coffe);
     
-//     // const gotoApi = async ()=>{
-
-//         //     const data = await resp.json();
-//         //     setCoffes(data)
-//         //     console.log(data);
-//         // const resp = fetch('https://cafe-de-altura.vercel.app/api/products');
-//         //     return data;
-        
-//         // }
-//         useEffect(() => {
-//             fetch('https://cafe-de-altura.vercel.app/api/products')
-//             .then(resp => resp.json())
-//             .then((data)=>{setCoffes(data)});
+//    if(isloading)
+// cuando haga la peticion, es true y este cargando. 
+//luego la paso a false.
+        useEffect(() => {
+            fetch('https://cafe-de-altura.vercel.app/api/products')
+            .then(resp => resp.json())
+            .then((data)=>{setCoffes(data)});
             
             
             
-//         }, []);
+        }, []);
         
         
         
   
 
-//         return (
+        return (
 
-//             <div className='productos'>
+            <div className='productos'>
 
-//                 {coffe.map((Urls)=>{
+                {coffe.products?.map((Urls)=>{
+                    console.log(Urls);
             
-                    
-//                     <div>
-//                 <span> cargando...</span>
+                return(
 
-//                 <img src={coffe.Urls.product.img_url} key={coffe.brand} alt="" />
-//             </div>
+                <div>
+                <span> cargando...</span>
 
-//                 })}
+                <img src={Urls.img_url} key={coffe.brand} alt="" />
+
+                </div>
+                )    
+
+                })}
 
                 
               
-//             </div>
-//           );
+            </div>
+          );
 
 
-//     };
+    };
 
